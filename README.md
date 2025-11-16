@@ -57,6 +57,7 @@ rc-plane-fullstack/
 │   │   └── bom/
 │   └── firmware/
 │       ├── src/
+│       ├── include/
 │       └── tests/
 │
 ├── cfd/
