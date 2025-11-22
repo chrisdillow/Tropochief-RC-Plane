@@ -153,6 +153,15 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
 > - 2D CFD results (plots, coefficient of lift versus angle of attack (C~L~/AoA), coefficient of drag versus angle of attack (C~D~/AoA)
 > - 3D CFD results (lift distribution, stall snapshots)
 > - Aerodynamic summary in [`docs/design_report.md`](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/docs/design_report.md)
+> - **COMPLETED** - [Systems Architecture Packet](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/6bd93b936ecec61f42fc100dc52f864d16c5f90f/docs/diagrams/Systems%20Architecture%20Packet.pdf)
+>   - *This packet defines the system-level interactions, external context, information flow, system boundaries, and functional relationship between the pilot, ground controller, RF link, avionics electronics, sensors, servos, and power system. While not previously tied to this stage, it was important to formulate these decisions upfront.* 
+>   - **(A)** System Context Diagram
+>   - **(A1)** RF Architecture Diagram
+>   - **(A2)** Controller Architecture Diagram
+>   - **(A3)** Avionics Architecture Diagram
+>   - **(A4)** RF Packet Structure Diagram
+>   - **(A5)** Avionics Pinout Diagram
+>   - **(A6)** Power Architecture Diagram 
 
 ## STAGE 2 | CAD and 3D Printed Structure
 - Larger panels may be made using foamboard and components to be 3D printed may include the following:
