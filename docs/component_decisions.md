@@ -186,6 +186,9 @@ Due to:
 - Must have a low ripple for IMU noise immunity
 - Preference for a switching regulator for efficiency, as linear LDOs eat too much power
 - Should have a small footprint and be available in common packages
+- Regulator current requirements remain **TBD** and depend on:
+    - Servo torque sizing from aerodynamic control surface area
+    - Maximum simultaneous servo deflection under stabilization control
 
 ##### 5.1b | Voltage Regulator Candidates
 - **MP1584EN (Monolithic Power Systems)**
@@ -240,6 +243,7 @@ Due to:
 - Preference for modern firmware like BLHeli_S or BLHeli_32
 - Must NOT supply its own 5V BEC if using an onboard regulator, to avoid conflicts
 - Should have reliable startup and minimal weight
+- ESC current capacity remains **TBD** and will be finalized after propulsion sizing based on CFD drag estimates and thrust calculations.
 
 ##### 5.2b | ESC Candidates
 - **BLHeli_S 20A ESC (Generic / Racerstar / T-Motor)**
@@ -293,6 +297,10 @@ Due to:
 - Should keep the wing loading moderate
 - Preference for XT30 connector
 - Avoid excess mass in nosecone
+- Final battery capacity and C-rating are **TBD** and depend on:
+    - Drag and lift characteristics from CFD
+    - Target endurance time
+    - Weight budget required to maintain center of gravity location
 
 ##### 5.3b | Battery Candidates
 - **2S 1300 mAh (30-50C)**
@@ -342,6 +350,7 @@ Due to:
 - Preference for a metal gear for durability
 - Standard 3-pin connector
 - Smooth centering
+- Servo torque requirements are **TBD** pending airfoil selection, control surface geometry, and hinge moment estimation.
 
 #### 6.2 | Servo Candidates
 - **SG90 Micro Servo (Plastic Gear)**
@@ -394,6 +403,10 @@ Due to:
 - Must be easy to assemble
 - Preference for common ecosystem parts
 - Prevent accidental reverse polarity
+- Final connector choices depend on:
+    - PCB layout constraints from Stage 3
+    - EMI/RF susceptibility considerations
+    - Mechanical mounting and vibration environment
 
 #### 7.2 | Connector / Wiring Candidates
 - **XT30 (Battery Connector)**
