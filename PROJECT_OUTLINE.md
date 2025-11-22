@@ -124,10 +124,12 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
 
 ## STAGE 1 | Airframe and Aerodynamics
 #### 1.1 | Plane Type Selection and Envelope
-- **Type:** A small electronic trainer craft with a high wing and moderate dihedral.
-- **Wingspan:** 0.8 – 1.2 meters
-- **Target AUW:** 500 – 900 grams
-- **Flight Regime:** 10 – 20 m/s
+- **Type:** Electric-ducted fan (EDF) or high-power prop jet, inspired by the Su-47 Berkut to utilize forward-swept wings
+- **Wingspan (b):** ~0.9 meters
+- **Target AUW:** 1.3 - 1.6 kg, including EDF, battery, avionics
+- **Wing Loading (W/S):** 80-100 N/m^2, putting it roughly into 'jet' territory versus prior trainer targets
+- **Flight Regime:** 25 – 40 m/s (45 - 90 mph)
+- **Stability Goal:** Slightly "hot" but positive static margin ≈ 8 - 12% MAC, making it believable as a demonstrator without needing a fully functional fly-by-wire system.
 
 #### 1.2 | Aerodynamic Design Workflow
 - **1.2a | Baseline Geometry – Hand Calculations**
