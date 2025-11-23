@@ -31,6 +31,10 @@ The Tropochief project is a from-scratch, non-proprietary project intended to sh
 
 ```text
 rc-plane-fullstack/
+├── images/
+├── analysis/
+│   └── airfoil_screening/
+│
 ├── airframe/
 │   ├── cad/
 │   │   ├── fuselage/
@@ -47,22 +51,45 @@ rc-plane-fullstack/
 │   │   └── bom/
 │   └── firmware/
 │       ├── src/
+│       │  ├── control/
+│       │  ├── drivers/
+│       │  ├── rc/
+│       │  ├── util/
+│       │  ├── boardConfig.cpp
+│       │  └── main.cpp
 │       ├── include/
+│       │  ├── control/
+│       │  ├── drivers/
+│       │  ├── rc/
+│       │  ├── util/
+│       │  └── boardConfig.h
 │       └── tests/
 │
 ├── controller/
+│   ├── cad/
 │   ├── pcb/
 │   │   ├── kicad/
 │   │   ├── gerbers/
 │   │   └── bom/
 │   └── firmware/
 │       ├── src/
+│       │  ├── drivers/
+│       │  ├── ui/
+│       │  ├── boardConfig.cpp
+│       │  ├── calibration.cpp
+│       │  ├── calibration.cpp
+│       │  └── rcFrame.cpp
 │       ├── include/
 │       └── tests/
 │
 ├── cfd/
 │   ├── airfoil_2d/
+│   │   ├── case_setup/
+│   │   └── postprocessing/
 │   └── wing_3d/
+│       ├── case_setup/
+│       ├── mesh/
+│       └── postprocessing/
 │
 ├── sim/
 │   ├── python/
@@ -72,4 +99,5 @@ rc-plane-fullstack/
     ├── requirements.md
     ├── test_plan.md
     ├── flight_logs/
+    ├── diagrams/
     └── design_report.md
