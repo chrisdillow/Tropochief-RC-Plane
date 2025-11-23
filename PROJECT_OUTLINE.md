@@ -1,8 +1,9 @@
 # Tropochief RC Plane Project
 #### Chris Dillow
 ###### Outlined November 15, 2025
+###### Last Update: November 22, 2025
 
-#### Project Synopsis
+### Project Synopsis
 The Tropochief RC Aircraft Project is a full-stack engineering initiative that spans:
 - Airframe Design (CAD, materials, and control surfaces)
 - Aerodynamics Analysis (2D and 3D CFD)
@@ -12,9 +13,9 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
 - Stabilized Flight Mode (AHRS and PIDs)
 - Production-Ready Documentation and Testing Workflows
 
-#### Project Goals
+### Project Goals
 - **Technical Goals**
-  - Design and build an RC aircraft capable of stable flight at 10-20 m/s
+  - Design and build an RC aircraft capable of stable flight at 25-40 m/s
   - Implement a complete avionics stack including IMU, RF, and servo control
   - Develop a custom RC transmitter with joysticks, switches, and a custom protocol
   - Implement onboard attitude estimation (Mahony/Madgwick)
@@ -27,7 +28,7 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
   - Showcase structure, requirements, testing, and documentation discipline
   - Produce diagrams, deliverables, and logs that show real engineering workflow
   
-#### Skills and Disciplines Demonstrated
+### Skills and Disciplines Demonstrated
 - **Mechanical Engineering**
   - Airframe CAD, control surface linkages, and structural mounts
 - **Aerodynamics**
@@ -42,6 +43,12 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
   - Modular architecture, versioning, and documentation
 - **Testing and Validation**
   - Bench tests, flight tests, logging, and data analysis
+
+# Project Outline - Quicklinks Index
+- [Project Overview](https://github.com/chrisdillow/Tropochief-RC-Plane/edit/main/PROJECT_OUTLINE.md#project-overview)
+- [GitHub Repo General Directory](https://github.com/chrisdillow/Tropochief-RC-Plane/edit/main/PROJECT_OUTLINE.md#github-repo-general-directory)
+- [Project Outline](https://github.com/chrisdillow/Tropochief-RC-Plane/edit/main/PROJECT_OUTLINE.md#project-outline)
+- [Timeline](https://github.com/chrisdillow/Tropochief-RC-Plane/edit/main/PROJECT_OUTLINE.md#timeline)
 
 # Project Overview
 
@@ -124,9 +131,11 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
 
 # Project Outline
 > This project has a seven-stage development pipeline.
+> The current in-progress Stage and Step will be headed with 🛠️
+> Completed stages, steps, and deliverables will be headed with ✅
 
-## STAGE 1 | Airframe and Aerodynamics
-#### 1.1 | Plane Type Selection and Envelope
+## 🛠️ STAGE 1 | Airframe and Aerodynamics
+#### ✅ 1.1 | Plane Type Selection and Envelope
 - **Type:** Electric-ducted fan (EDF) or high-power prop jet, inspired by the Su-47 Berkut to utilize forward-swept wings
 - **Wingspan (b):** ~0.9 meters
 - **Target AUW:** 1.3 - 1.6 kg, including EDF, battery, avionics
@@ -135,11 +144,11 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
 - **Stability Goal:** Slightly "hot" but positive static margin ≈ 8 - 12% MAC, making it believable as a demonstrator without needing a fully functional fly-by-wire system.
 
 #### 1.2 | Aerodynamic Design Workflow
-- **1.2a | Baseline Geometry – Hand Calculations**
+- **✅ 1.2a | Baseline Geometry – Hand Calculations**
   - Select an airfoil from public options, likely NACA 2412-style
   - Wing area, aspect ratio, tail volume coefficients
   - Estimate wing loading and static margin (e.g., 5 – 15% MAC)
-- **1.2b | 2D Airfoil CFD**
+- **🛠️ 1.2b | 2D Airfoil CFD**
   - Simulate the 2D airfoil cross section at various angles of attack
   - Extract the lift curve slope, stall behavior, CI/CD
 - **1.2c | 3D Wing CFD**
@@ -153,12 +162,15 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
   - Coarser mesh around full craft for overall drag estimate and flow over tail for different angle of attackand elevator deflections
 
 > #### STAGE DELIVERABLES:
-> - Airfoil selection and justification
-> - Wing sizing and aerodynamic hand calculations
+> - 🛠️ Airfoil selection and justification
+>    - 🛠️ Candidate airfoil Python / XFoil analyses
+> - ✅ Wing sizing and aerodynamic hand calculations
+>     - ✅ [Baseline Wing Geometry](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/cfd/BASELINE%20WING%20GEOMETRY.pdf)
+>     - ✅ [Design Report, Stage 1.2a | Baseline Geometry Hand Calculations](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/cfd/BASELINE%20WING%20GEOMETRY.pdf)
 > - 2D CFD results (plots, coefficient of lift versus angle of attack (C~L~/AoA), coefficient of drag versus angle of attack (C~D~/AoA)
 > - 3D CFD results (lift distribution, stall snapshots)
-> - Aerodynamic summary in [`docs/design_report.md`](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/docs/design_report.md)
-> - **COMPLETED** - [Systems Architecture Packet](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/6bd93b936ecec61f42fc100dc52f864d16c5f90f/docs/diagrams/Systems%20Architecture%20Packet.pdf)
+> - 🛠️ Aerodynamic summary in [`docs/design_report.md`](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/docs/design_report.md)
+> - ✅ [Systems Architecture Packet](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/6bd93b936ecec61f42fc100dc52f864d16c5f90f/docs/diagrams/Systems%20Architecture%20Packet.pdf)
 >   - *This packet defines the system-level interactions, external context, information flow, system boundaries, and functional relationship between the pilot, ground controller, RF link, avionics electronics, sensors, servos, and power system. While not previously tied to this stage, it was important to formulate these decisions upfront.* 
 >   - **(A)** System Context Diagram
 >   - **(A1)** RF Architecture Diagram
@@ -373,10 +385,12 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
 # Timeline
 > Overall expected time, if sole focus is on project, is 10 – 14 weeks.
 
-#### Weeks 1 – 2
-- Set requirements and constraints
-- Make rough hand calculations, informing selection of airfoil and component geometry
-- Start 2D airfoil CFD
+#### 🛠️ Weeks 1 – 2
+**START DATE:** November 15, 2025
+- ✅ Set requirements and constraints
+- ✅ Generate system architecture documents
+- ✅ Make rough hand calculations, informing selection of airfoil and component geometry
+- 🛠️ Start 2D airfoil CFD
 
 #### Weeks 3 – 4
 - Build parametric, formula-driven CAD models of the basic airframe
