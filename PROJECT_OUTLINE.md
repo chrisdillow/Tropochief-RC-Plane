@@ -74,7 +74,7 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
 > **Bold** incidates a top-level directory.
 
 - [**`rc-plane-fullstack/`**](https://github.com/chrisdillow/Tropochief-RC-Plane)
-  - [`airframe/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/airframe)
+  - [**`airframe/`**](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/airframe)
     - [`cad/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/airframe/cad)
       - [`fuselage/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/airframe/cad/fuselage)
       - [`wing/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/airframe/cad/wing)
@@ -118,6 +118,9 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
     - [`flight_logs/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/docs/flight_logs)
     - [`design_report.md`](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/docs/design_report.md)
     - [`component_decisions.md`](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/docs/component_decisions.md)
+  - [**`images`**](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/images)
+  - [**`analysis`**](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/analysis)
+    - [`airfoil_screening`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/analysis/airfoil_screening)
 
 # Project Outline
 > This project has a seven-stage development pipeline.
