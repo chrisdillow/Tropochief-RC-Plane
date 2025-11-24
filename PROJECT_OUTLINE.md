@@ -50,6 +50,16 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
 - [Project Outline](https://github.com/chrisdillow/Tropochief-RC-Plane/edit/main/PROJECT_OUTLINE.md#project-outline)
 - [Timeline](https://github.com/chrisdillow/Tropochief-RC-Plane/edit/main/PROJECT_OUTLINE.md#timeline)
 
+# Deliverables by Stage w/ Links and Progress Markers
+*Completed stages are marked by* ✅. *The current in-progress stage is marked by* 🛠️.
+- 🛠️ [STAGE 1](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/PROJECT_OUTLINE.md#stage-1-deliverables)
+- [STAGE 2](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/PROJECT_OUTLINE.md#stage-2-deliverables)
+- [STAGE 3](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/PROJECT_OUTLINE.md#stage-3-deliverables)
+- [STAGE 4](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/PROJECT_OUTLINE.md#stage-4-deliverables)
+- [STAGE 5](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/PROJECT_OUTLINE.md#stage-5-deliverables)
+- [STAGE 6](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/PROJECT_OUTLINE.md#stage-6-deliverables)
+- [STAGE 7](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/PROJECT_OUTLINE.md#stage-7-deliverables)
+
 # Project Overview
 
 #### Airframe and Flight Control Surfaces
@@ -151,6 +161,8 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
 - **🛠️ 1.2b | 2D Airfoil CFD**
   - Simulate the 2D airfoil cross section at various angles of attack
   - Extract the lift curve slope, stall behavior, CI/CD
+    - ✅ Python preliminary screening on all candidates
+    - 🛠️ OpenFOAM comprehensive analysis
 - **1.2c | 3D Wing CFD**
   - Use half wing and symmetry plane to reduce cost
   - Verify:
@@ -161,13 +173,17 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
   - This is optional and will make the craft heavier
   - Coarser mesh around full craft for overall drag estimate and flow over tail for different angle of attackand elevator deflections
 
-> #### STAGE DELIVERABLES:
+> #### STAGE 1 DELIVERABLES:
+>  ##### PROGRESS: COMPLETED 7/12 TASK ITEMS | 58.33% STAGE COMPLETION
 > - 🛠️ Airfoil selection and justification
->    - 🛠️ Candidate airfoil Python / XFoil analyses
+>    - ✅ Candidate airfoil Python / XFoil analyses
 > - ✅ Wing sizing and aerodynamic hand calculations
 >     - ✅ [Baseline Wing Geometry](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/cfd/BASELINE%20WING%20GEOMETRY.pdf)
 >     - ✅ [Design Report, Stage 1.2a | Baseline Geometry Hand Calculations](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/cfd/BASELINE%20WING%20GEOMETRY.pdf)
-> - 2D CFD results (plots, coefficient of lift versus angle of attack (C~L~/AoA), coefficient of drag versus angle of attack (C~D~/AoA)
+> - 🛠️ 2D CFD results (plots, coefficient of lift versus angle of attack (C~L~/AoA), coefficient of drag versus angle of attack (C~D~/AoA)
+>     - ✅ Preliminary airfoil screening in Python (script: [`airfoil_screening.py`](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/analysis/airfoil_screening/airfoil_screening.py))
+>       - ✅ Resultant figures, plots, datatables, and behavior desirability scoring in [`airfoil_selection.md`](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/analysis/airfoil_screening/airfoil_selection.md)
+>     - 🛠️ Narrow candidates based on Python screening and test in OpenFOAM
 > - 3D CFD results (lift distribution, stall snapshots)
 > - 🛠️ Aerodynamic summary in [`docs/design_report.md`](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/docs/design_report.md)
 > - ✅ [Systems Architecture Packet](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/6bd93b936ecec61f42fc100dc52f864d16c5f90f/docs/diagrams/Systems%20Architecture%20Packet.pdf)
@@ -206,7 +222,7 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
   - Keep the bay PCB away from the battery (heat) and any high-vibration motor axis
   - Possibly add a simple vibration isolating tray using TPU grommets or printed flexures
 
-> #### STAGE DELIVERABLES:
+> #### STAGE 2 DELIVERABLES:
 > - Complete 3D CAD model and 2D drawing sets for fuselage, wings, and tail
 > - STL files for 3D printed components
 > - Exploded assembly diagrams
@@ -243,7 +259,7 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
   - Copper pours should be under power regulators to help with heat dissipation
   - Add test pads for IMU signals, RF signals, and RC input
 
-> #### STAGE DELIVERABLES:
+> #### STAGE 3 DELIVERABLES:
 > - KiCAD schematic and board layout in [`avionics/pcb/kicad/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/avionics/pcb/kicad)
 > - Gerber manufacturing files in [`avionics/pcb/gerbers/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/avionics/pcb/gerbers)
 > - Bill of Materials in [`avionics/pcb/bom/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/avionics/pcb/bom)
@@ -269,7 +285,7 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
   - Mounts for gimbals, PCB, and battery
   - Ergonomic shape, potential of finger grooves for comfort and security
 
-> #### STAGE DELIVERABLES:
+> #### STAGE 4 DELIVERABLES:
 > - Controller CAD shell 3D model and 2D drawings in [`controller/cad/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/controller/cad)
 > - Controller PCB schematic and layout in [`controller/pcb/kicad/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/controller/pcb/kicad)
 > - Gerber files for manufacture in [`controller/pcb/gerbers/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/controller/pcb/gerbers)
@@ -308,7 +324,7 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
   - Transmit over RF at fixed rate (considering 50 – 100 Hz)
   - Implement failsafe timeout with user warning, LED indicators for link state, and a possible simple menu and/or craft live POV with OLED display
 
-> #### STAGE DELIVERABLES:
+> #### STAGE 5 DELIVERABLES:
 > - [`avionics/firmware/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/avionics/firmware) implementation
 > - [`controller/firmware/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/controller/firmware) implementation
 > - Driver tests
@@ -346,7 +362,7 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
 - **6.2c | Documentation**
   - For each case, keep mesh details, boundary conditions, and plots from postprocessing/
 
-> #### STAGE DELIVERABLES:
+> #### STAGE 6 DELIVERABLES:
 > - Completed airfoil and wing CFD cases
 > - Mesh visualization
 > - Forces and aerodynamic performance plots
@@ -376,7 +392,7 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
 - Always fligh in a safe and legal RC flying area clear of people, roads, and obstacles, within applicable regulations
 - Log flights in [`docs/flight_logs/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/docs/flight_logs)
 
-> #### STAGE DELIVERABLES:
+> #### STAGE 7 DELIVERABLES:
 > - Bench test results
 > - Integration test logs
 > - Flight logs in [`docs/flight_logs/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/docs/flight_logs)
