@@ -1,7 +1,7 @@
 # Tropochief RC Plane Project
 #### Chris Dillow
 ###### Outlined November 15, 2025
-###### Last Update: November 22, 2025
+###### Last Update: December 1, 2025
 
 ### Project Synopsis
 The Tropochief RC Aircraft Project is a full-stack engineering initiative that spans:
@@ -120,7 +120,9 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
       - [`tests/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/controller/firmware/tests)
   - [**`cfd/`**](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/cfd)
     - [`airfoil_2d/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/cfd/airfoil_2d)
-      - [`case_setup/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/cfd/airfoil_2d/case_setup)
+      - [`baseCase/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/cfd/airfoil_2d/baseCase)
+      - [`baseCase_detailed/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/cfd/airfoil_2d/baseCase_detailed)
+      - [`geometry/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/cfd/airfoil_2d/geometry)
       - [`postprocessing/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/cfd/airfoil_2d/postprocessing)
     - [`wing_3d/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/cfd/wing_3d)
       - [`mesh/`](https://github.com/chrisdillow/Tropochief-RC-Plane/tree/main/cfd/wing_3d/mesh)
@@ -174,16 +176,18 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
   - Coarser mesh around full craft for overall drag estimate and flow over tail for different angle of attackand elevator deflections
 
 > #### STAGE 1 DELIVERABLES:
->  ##### PROGRESS: COMPLETED 7/12 TASK ITEMS | 58.33% STAGE COMPLETION
+>  ##### PROGRESS: COMPLETED 10/14 TASK ITEMS | 71.43% STAGE COMPLETION
 > - 🛠️ Airfoil selection and justification
 >    - ✅ Candidate airfoil Python / XFoil analyses
 > - ✅ Wing sizing and aerodynamic hand calculations
 >     - ✅ [Baseline Wing Geometry](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/cfd/BASELINE%20WING%20GEOMETRY.pdf)
 >     - ✅ [Design Report, Stage 1.2a | Baseline Geometry Hand Calculations](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/cfd/BASELINE%20WING%20GEOMETRY.pdf)
-> - 🛠️ 2D CFD results (plots, coefficient of lift versus angle of attack (C~L~/AoA), coefficient of drag versus angle of attack (C~D~/AoA)
+> - ✅ 2D CFD results (plots, coefficient of lift versus angle of attack (C~L~/AoA), coefficient of drag versus angle of attack (C~D~/AoA)
 >     - ✅ Preliminary airfoil screening in Python (script: [`airfoil_screening.py`](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/analysis/airfoil_screening/airfoil_screening.py))
+>     - ✅ Preliminary screening results verification in OpenFOAM (script: [`automate_2d_openFOAM.py`](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/cfd/airfoil_2d/automate_2d_openFOAM.py))
+>     - 🛠️ Comprehensive 2D CFD results in OpenFOAM | *Cases in processing. Once results and `design_report.md` overview have been updated, this WIP will be changed to completion.*
 >       - ✅ Resultant figures, plots, datatables, and behavior desirability scoring in [`airfoil_selection.md`](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/analysis/airfoil_screening/airfoil_selection.md)
->     - 🛠️ Narrow candidates based on Python screening and test in OpenFOAM
+>     - ✅ Narrow candidates based on Python screening and test in OpenFOAM
 > - 3D CFD results (lift distribution, stall snapshots)
 > - 🛠️ Aerodynamic summary in [`docs/design_report.md`](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/docs/design_report.md)
 > - ✅ [Systems Architecture Packet](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/6bd93b936ecec61f42fc100dc52f864d16c5f90f/docs/diagrams/Systems%20Architecture%20Packet.pdf)
@@ -401,18 +405,23 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
 # Timeline
 > Overall expected time, if sole focus is on project, is 10 – 14 weeks.
 
-#### 🛠️ Weeks 1 – 2
-**START DATE:** November 15, 2025
+#### ✅ Weeks 1 – 2
+> **START DATE:** November 15, 2025
+> 
+> **END DATE:** December 1, 2025
+> 
+> **ON-TIME STATUS:** On Schedule
 - ✅ Set requirements and constraints
 - ✅ Generate system architecture documents
 - ✅ Make rough hand calculations, informing selection of airfoil and component geometry
-- 🛠️ Start 2D airfoil CFD
+- ✅ Start 2D airfoil CFD
 
-#### Weeks 3 – 4
+#### 🛠️ Weeks 3 – 4
+> **START DATE:** December 1, 2025
 - Build parametric, formula-driven CAD models of the basic airframe
   - Create 2D drawings of the components and assembly per ASME standards
 - Model control surfaces and servo mounts
-- 3D wing CFD
+- 🛠️ 3D wing CFD
 
 #### Weeks 5 – 6
 - Draft the avionics PCB’s schematics and layout
