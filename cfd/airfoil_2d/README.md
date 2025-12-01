@@ -14,11 +14,12 @@ these files also exist in `0_field_definitions/`:
 
 | Purpose | OpenFOAM File | Human-Readable File |
 |---------|---------------|---------------------|
-| Velocity field | `U` | `velocityField_U` |
-| Pressure field | `p` | `pressureField_p` |
-| Turbulent viscosity | `nut` | `turbulentViscosity_nut` |
-| Turbulence kinetic energy | `k` | `turbulenceKineticEnergy_k` |
-| Turbulence dissipation rate | `omega` | `turbulenceDissipationRate_omega` |
+| Velocity Field | `U` | `velocityField_U` |
+| Pressure Field | `p` | `pressureField_p` |
+| Turbulent Viscosity | `nut` | `turbulentViscosity_nut` |
+| Turbulence Kinetic Energy | `k` | `turbulenceKineticEnergy_k` |
+| Turbulence Dissipation Rate | `omega` | `turbulenceDissipationRate_omega` |
+| Fluid Density Field | `rho` | `fluidDensity_rho` |
 
 The solver requires the original OpenFOAM filenames inside `0/`.
 The human-readable versions are provided for clarity and documentation.
