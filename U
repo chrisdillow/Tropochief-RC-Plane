@@ -1,0 +1,57 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2506                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+// WRITTEN BY CHRIS DILLOW | NOVEMBER 29, 2025 | TROPOCHIEF RC PLANE PROJECT
+// FIELD: Velocity
+FoamFile
+{
+    version 2.0;
+    format ascii;
+    class volVectorField;
+    location "0";
+    object U;
+}
+
+dimensions [0 1 -1 0 0 0 0]; // m/s
+
+// Freestream 30 m/s in +x
+internalField uniform (30 0 0);
+
+boundaryField
+{
+    inlet
+    {
+        type fixedValue;
+        value uniform (UX_PLACEHOLDER UY_PLACEHOLDER 0); // The Python script will adjust these per-alpha case for you
+    }
+
+    outlet
+    {
+        type zeroGradient;
+    }
+
+    top
+    {
+        type slip;
+    }
+
+    bottom
+    {
+        type slip;
+    }
+
+    airfoil
+    {
+        type fixedValue;
+        value uniform (0 0 0); // No-slip wall
+    }
+
+    frontAndBack
+    {
+        type empty;
+    }
+}
