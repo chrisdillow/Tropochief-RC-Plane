@@ -1,0 +1,3 @@
+airfoil,alphaAtClMax,clMax,clDropPostStall,liftCurveSlope,maxClCdCruise,minCdOverall,loadIndex,scoreStability,scoreEfficiency,scoreManeuverTorsion,scoreComposite
+E168,18,2.2224022e-07,,1.1555940389631184e-08,0.02143523225354072,4.3394588e-06,2.56819473449852e-15,,100.0,35.0,
+NACA2412,18,2.3342349e-07,,1.2072219520090913e-08,0.0210012652634312,4.6245313e-06,2.817939612425746e-15,,0.0,65.0,
