@@ -1,0 +1,94 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2412                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+// WRITTEN BY CHRIS DILLOW | NOVEMBER 29, 2025 | TROPOCHIEF RC PLANE PROJECT
+// FIELD: Snappy Hex Mesh Dictionary
+FoamFile
+{
+    version 2.0;
+    format ascii;
+    class dictionary;
+    object snappyHexMeshDict;
+    location "system";
+}
+
+castellatedMesh true;
+snap true;
+addLayers false; // This can later be turned on for BL layers
+mergeTolerance 1e-6;
+
+geometry
+{
+    airfoil.stl
+    {
+        type triSurfaceMesh;
+        name airfoil;
+    }
+}
+
+castellatedMeshControls
+{
+    maxLocalCells 1000000;
+    maxGlobalCells 2000000;
+    minRefinementCells 10;
+    maxLoadUnbalance 0.10;
+
+    nCellsBetweenLevels 3;
+
+    locationInMesh (0.5 0.1 0.0);
+
+    refinementSurfaces
+    {
+        airfoil
+        {
+            level (2 2); // Near-field refinement
+            patchInfo
+            {
+                type wall;
+                name airfoil;
+            }
+        }
+    }
+
+    resolveFeatureAngle 30;
+
+    features
+    (
+        // This is a required function block but must remain unpopulated unless an eMesh is used
+    );
+
+    refinementRegions
+    {
+        // TODO: Extra refinement boxes around the airfoil and wake
+    }
+
+    allowFreeStandingZoneFaces true;
+}
+
+snapControls
+{
+    nSmoothPatch 3;
+    tolerance 2.0;
+    nSolveIter 30;
+    nRelaxIter 5;
+    nFeatureSnapIter 10;
+}
+
+addLayersControls
+{
+    // TODO: Once addLayers is set to 'true' after debugging, flesh this out
+}
+
+meshQualityControls
+{
+    #includeEtc "caseDicts/meshQualityDict"
+    maxNonOrtho 65;
+    nSmoothScale 4;
+    errorReduction 0.75;
+}
+
+debug 0;
