@@ -1,6 +1,8 @@
 # CFD Case Setup Overview
 2D CFD was automated and controlled through [`automate_2d_openFOAM.py`](https://github.com/chrisdillow/Tropochief-RC-Plane/edit/main/cfd/airfoil_2d/automate_2d_openFOAM.py), which allowed for mass parametric assembly of OpenFOAM case preconditions and consequent executions, data normalization, visualization, scoring, and ranking.
 
+*All `baseCase/` and `baseCase_detailed/` files are uploaded in .txt format for GitHub compatibility. To be compatible with OpenFOAM after downloading, the extensions must be removed.*
+
 This case uses the standard OpenFOAM folder structure:
 
 - `0/` – Initial & boundary conditions for each physics field  
