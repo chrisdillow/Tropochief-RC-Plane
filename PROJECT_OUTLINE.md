@@ -1,7 +1,7 @@
 # Tropochief RC Plane Project
 #### Chris Dillow
 ###### Outlined November 15, 2025
-###### Last Update: December 1, 2025
+###### Last Update: December 2, 2025
 
 ### Project Synopsis
 The Tropochief RC Aircraft Project is a full-stack engineering initiative that spans:
@@ -165,6 +165,7 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
   - Extract the lift curve slope, stall behavior, CI/CD
     - ✅ Python preliminary screening on all candidates
     - 🛠️ OpenFOAM comprehensive analysis
+    - 🚧**12/2/2025**🚧 Discrepancies between OpenFOAM and Python/XFoil data require retesting. Misaligned OpenFOAM case setup values have been identified. Correcting OpenFOAM case setup and resimulating 2D airfoils.
 - **1.2c | 3D Wing CFD**
   - Use half wing and symmetry plane to reduce cost
   - Verify:
@@ -186,6 +187,7 @@ The Tropochief RC Aircraft Project is a full-stack engineering initiative that s
 >     - ✅ Preliminary airfoil screening in Python (script: [`airfoil_screening.py`](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/analysis/airfoil_screening/airfoil_screening.py))
 >     - ✅ Preliminary screening results verification in OpenFOAM (script: [`automate_2d_openFOAM.py`](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/cfd/airfoil_2d/automate_2d_openFOAM.py))
 >     - 🛠️ Comprehensive 2D CFD results in OpenFOAM | *Cases in processing. Once results and `design_report.md` overview have been updated, this WIP will be changed to completion.*
+>       - 🚧**12/2/2025**🚧 Discrepancies between OpenFOAM and Python/XFoil data require retesting. Misaligned OpenFOAM case setup values have been identified. Correcting OpenFOAM case setup and resimulating 2D airfoils.
 >       - ✅ Resultant figures, plots, datatables, and behavior desirability scoring in [`airfoil_selection.md`](https://github.com/chrisdillow/Tropochief-RC-Plane/blob/main/analysis/airfoil_screening/airfoil_selection.md)
 >     - ✅ Narrow candidates based on Python screening and test in OpenFOAM
 > - 3D CFD results (lift distribution, stall snapshots)
